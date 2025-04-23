@@ -12,7 +12,9 @@ function Home() {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("http://localhost:3000/movies");
+      const response = await fetch(
+        "https://mymoviz-part5-back-two.vercel.app/movies"
+      );
       const data = await response.json();
       console.log(data);
       setMoviesData(data.movies);
